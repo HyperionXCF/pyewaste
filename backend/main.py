@@ -13,7 +13,11 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI(title="E-Waste Collection API")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # React development server
+    allow_origins=[
+        "http://localhost:5173",  # Local development
+        "https://pyewaste.netlify.app",  # Production Netlify domain - update this
+        "https://your-netlify-subdomain.netlify.app"  # Temporary Netlify domain
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
