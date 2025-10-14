@@ -1,0 +1,118 @@
+/* Modern base styles */
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --secondary: #4b5563;
+  --secondary-hover: #374151;
+  --success: #059669;
+  --danger: #dc2626;
+  --warning: #d97706;
+  --surface: #ffffff;
+  --background: #f8fafc;
+  --text: #1e293b;
+  --text-secondary: #64748b;
+  --border: #e2e8f0;
+  --radius: 0.5rem;
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* Base styles */
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--radius);
+  transition: all 0.2s;
+  cursor: pointer;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.btn:hover {
+  background-color: var(--background);
+}
+
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-hover);
+}
+
+/* Input styles */
+.input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--surface);
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+/* Card styles */
+.card {
+  background-color: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Modern animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
