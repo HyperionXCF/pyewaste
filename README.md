@@ -15,7 +15,7 @@ Built to be lightweight, understandable, and easy to extend (unlike half the pro
 ---
 
 📁 Project Structure
-'''
+```
 .
 ├── backend/
 │   ├── main.py
@@ -28,8 +28,7 @@ Built to be lightweight, understandable, and easy to extend (unlike half the pro
 │   ├── package.json
 │   └── vite.config.js
 └── README.md
-
-'''
+```
 ---
 
 ⚙️ Requirements
